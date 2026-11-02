@@ -12,7 +12,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.core.app.NotificationCompat
 import androidx.core.app.ServiceCompat
 import java.util.concurrent.ConcurrentLinkedQueue
-
+import java.lang.Process
 class OverlayService : Service() {
     companion object { val on = mutableStateOf(false) }
 
@@ -175,5 +175,5 @@ class OverlayService : Service() {
         try { wm.addView(h, p); hud = h; tv = t; gv = g; lp = p } catch (e: Throwable) {}
     }
 
-    private fun hideHud() { hud?.let { try { wm.removeView(it) } catch (e: Throwable) {} }; hud = null; tv = null; gv = null }
-}￼Enter
+    prite fun hideHud() { hud?.let { try { wm.removeView(it) } catch (e: Throwable) {} }; hud = null; tv = null; gv = null }
+
